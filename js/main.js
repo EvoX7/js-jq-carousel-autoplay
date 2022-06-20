@@ -16,14 +16,33 @@ const imagesList = [
 const imageWrapper = document.getElementById("wrapper-images");
 
 
+let activeElement = 1;
+imagesList[activeElement].classList.add ("active");
 
-for (let imageSlide = 0; imageSlide < imagesList.length; imageSlide++) {
+const nextButton = document.getElementById("btn-next");
+
+nextButton.addEventListener("click", function(){
+
+for (let imageSlide = 1; imageSlide < imagesList.length; imageSlide++) {
     let insertImage = document.createElement("img");
-    imageWrapper.append(insertImage);
     insertImage.setAttribute("src", imagesList [imageSlide]);
-    insertImage.classList.add ("active");
+    imageWrapper.append(insertImage);
+    
+
+    imagesList[activeElement].classList.remove ("active");
+
+    if (activeElement === imagesList.length){
+        activeElement = 0;
+    }
+    imagesList[activeElement].classList.add ("active");
     
 }
+});
+
+
+
+
+
 
 // poi immagini nascoste
 

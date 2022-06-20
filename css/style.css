@@ -1,9 +1,15 @@
 img {
+    width: 100%;
+    display: none;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: 20px;
+}
+
+.active {
+    display: block;
 }
 
 body {
     background-color: rgb(155, 155, 155);
-    
 }
+

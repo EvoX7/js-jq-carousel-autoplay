@@ -16,18 +16,18 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container mb-4 mt-4">
     <div class="row">
         <div class="col-12">
             <h1 class="fw-bold text-center">Simple Carousel</h1>
-            <div class="carousel-container d-flex flex-column w-75  mx-auto mt-4">
-                <div class="carousel-current-image mb-3">
-                    <img src="https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg" alt="mountains">
+            <div class="carousel-container d-flex flex-column w-75 mx-auto mt-4">
+                <div id="wrapper-images" class="carousel-current-image mb-3">
+                   
 
                 </div>
-                <div class="carousel-nav d-flex justify-content-around">
-                    <button type="button" class="btn btn-lg btn-warning">Previous</button>
-                    <button type="button" class="btn btn-lg btn-warning">Next</button>
+                <div class="carousel-nav d-flex justify-content-between">
+                    <button type="button" id="btn-prev" class="btn btn-lg btn-warning">Previous</button>
+                    <button type="button" id="btn-next" class="btn btn-lg btn-warning">Next</button>
                     
                 </div>
             </div>

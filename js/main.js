@@ -8,43 +8,23 @@ const imagesList = [
     "https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg",
     "https://iso.500px.com/wp-content/uploads/2021/02/Torres-Del-Paine-Sunset-By-Paul-Reiffer-2-1500x1000.jpg",
     "https://mymodernmet.com/wp/wp-content/uploads/2020/02/Landscape-Photographer-of-the-Year-Sander-Grefte.jpg"
-  ];
-  
+];
+
 
 
 // seleziono output
 const imageWrapper = document.getElementById("wrapper-images");
 
-
+// dare classe active sul primo elemento 
 let activeElement = 1;
-imagesList[activeElement].classList.add ("active");
 
-const nextButton = document.getElementById("btn-next");
+    for (let imageSlide = 1; imageSlide < imagesList.length; imageSlide++) {
+        let newImage = document.createElement("img");
+        newImage.setAttribute("src", imagesList[activeElement]);
+        newImage.classList.add("active");
+        imageWrapper.append(newImage);
 
-nextButton.addEventListener("click", function(){
-
-for (let imageSlide = 1; imageSlide < imagesList.length; imageSlide++) {
-    let insertImage = document.createElement("img");
-    insertImage.setAttribute("src", imagesList [imageSlide]);
-    imageWrapper.append(insertImage);
-    
-
-    imagesList[activeElement].classList.remove ("active");
-
-    if (activeElement === imagesList.length){
-        activeElement = 0;
     }
-    imagesList[activeElement].classList.add ("active");
-    
-}
-});
-
-
-
-
-
-
-// poi immagini nascoste
 
 
 
@@ -52,4 +32,11 @@ for (let imageSlide = 1; imageSlide < imagesList.length; imageSlide++) {
 
 
 
-  
+
+
+
+
+
+
+
+

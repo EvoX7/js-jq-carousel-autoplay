@@ -41,7 +41,7 @@ const nextBtn = document.getElementById("btn-next");
 // ? Defining actions on click
 nextBtn.addEventListener("click", function() {
 
-    const activeImage = document.querySelector(".wrapper-images img.active");
+    const activeImage = document.querySelector(".carousel-current-image img.active");
     console.log(activeImage);
     activeImage.classList.remove("active");
 

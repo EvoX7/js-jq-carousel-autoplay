@@ -13,7 +13,7 @@ const imagesList = [
 const imageWrapper = document.getElementById("wrapper-images");
 
 // ? Selecting active element 
-let activeElement = 0;
+let activeElement = 1;
 
 
 // ! Creating loop for ImageList 
@@ -46,9 +46,17 @@ nextBtn.addEventListener("click", function() {
     activeImage.classList.remove("active");
 
     activeElement++;
+
     if (activeElement === 6 ){
         activeElement = 0;
     }
+
+    const imageSelect = document.querySelectorAll(".carousel-current-image img");
+
+
+    imageSelect[activeElement].classList.add("active");
+
+
     
 
 

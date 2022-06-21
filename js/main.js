@@ -1,6 +1,4 @@
-
-
-// Image List
+// ! Image List 
 const imagesList = [
     "https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg",
     "https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg",
@@ -11,20 +9,59 @@ const imagesList = [
 ];
 
 
-
-// seleziono output
+// ? Selecting html output 
 const imageWrapper = document.getElementById("wrapper-images");
 
-// dare classe active sul primo elemento 
-let activeElement = 1;
+// ? Selecting active element 
+let activeElement = 0;
 
-    for (let imageSlide = 1; imageSlide < imagesList.length; imageSlide++) {
-        let newImage = document.createElement("img");
-        newImage.setAttribute("src", imagesList[activeElement]);
+
+// ! Creating loop for ImageList 
+for (let imageSlide = 0; imageSlide < imagesList.length; imageSlide++) {
+
+    // * Creating a new image (element)
+    const newImage = document.createElement("img");
+
+    // * Giving attributes to the new image (element) 
+    newImage.setAttribute("src", imagesList[imageSlide]);
+
+    // * Giving conditions to active class 
+    if (imageSlide == activeElement) {
         newImage.classList.add("active");
-        imageWrapper.append(newImage);
-
     }
+
+    // *Adding element to the parent 
+    imageWrapper.append(newImage);
+}
+
+// ? Defining buttons  
+const prevBtn = document.getElementById("btn-prev");
+const nextBtn = document.getElementById("btn-next");
+
+// ? Defining actions on click
+nextBtn.addEventListener("click", function() {
+
+    const activeImage = document.querySelector(".wrapper-images img.active");
+    console.log(activeImage);
+    activeImage.classList.remove("active");
+
+    activeElement++;
+    if (activeElement === 6 ){
+        activeElement = 0;
+    }
+    
+
+
+});
+
+
+
+
+
+
+
+
+
 
 
 

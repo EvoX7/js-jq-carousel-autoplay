@@ -8,6 +8,9 @@ const imagesList = [
     "https://mymodernmet.com/wp/wp-content/uploads/2020/02/Landscape-Photographer-of-the-Year-Sander-Grefte.jpg"
 ];
 
+
+// Adding 
+
 // ? Selecting html output
 const imageWrapper = document.getElementById("wrapper-images");
 

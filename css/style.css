@@ -1,37 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 img {
-    width: 100%;
-    display: none;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 2px solid white;
+  width: 100%;
+  display: none;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 body {
-    background-color: rgb(174, 174, 174);
+  background-color: rgb(174, 174, 174);
 }
 
 h1 {
-    background-image: linear-gradient(90deg, rgb(249, 183, 39), rgb(0, 38, 255));
-    background-clip: text;
-    font-family: 'Dancing Script', cursive;
-    font-size: 70px;
-    color: transparent;
-    text-shadow: 3px 3px black;
+  background-image: linear-gradient(90deg, rgb(249, 183, 39), rgb(0, 38, 255));
+  background-clip: text;
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  color: transparent;
+  text-shadow: 3px 3px black;
 }
-
-
 
 .carousel-container .pointers-container i.active {
-    color: rgb(255, 195, 15);
-    
-
-
+  color: rgb(255, 195, 15);
 }
 
+.btn {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
